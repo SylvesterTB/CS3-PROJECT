@@ -2,10 +2,114 @@ html
 {
     height: 100%;
     width: 100%;
+
+}
+body{
     margin: 0;
     padding: 0;
     background-image: url(download.png);
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
 }
+
+/*#gallery {*/
+/*    background-color: #414946;*/
+/*    width: 45px;*/
+/*    color: white;*/
+/*    height: 45px;*/
+/*    border: 1px solid black;*/
+/*    outline: 2px solid red;*/
+
+/*}*/
+
+#gallery_block{
+    display: flex;
+    background-color: lightblue;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 100vh;
+    flex: 1;
+    align-items:center;
+}
+
+#draw{
+    display: flex;
+    background-color: lightgreen;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 100vh;
+    flex: 2;
+
+}
+#colors{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+    flex: none;
+
+
+}
+
+#canvas{
+    /*display:flex;*/
+    /*flex-direction: column;*/
+    background-color: red;
+}
+
+#canvas_controls{
+    display: flex;
+    background-color: blue;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 400px;
+    height: 100px;
+    flex: none;
+    margin-top: 700px;
+}
+
+#chat{
+    display: flex;
+    background-color: salmon;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 100vh;
+    flex: 1;
+}
+
+.gallery1{
+    display: flex;
+    background-color: #ffffff;
+    width: 90px;
+    color: white;
+    height: 90px;
+    border: 4px solid black;
+}
+
+.gallery2{
+    display: flex;
+    background-color: #ffffff;
+    width: 90px;
+    color: white;
+    height: 90px;
+    border: 4px solid black;
+}
+
+.gallery3{
+    display: flex;
+    background-color: #ffffff;
+    width: 90px;
+    color: white;
+    height: 90px;
+    border: 4px solid black;
+
+}
+
