@@ -7,7 +7,7 @@ html
 body{
     margin: 0;
     padding: 0;
-    background-image: url(download.png);
+    /*background-image: url(download.png);*/
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
@@ -15,6 +15,17 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+.grid-item{
+    background-color: indianred;
+    border: 1px solid black;
+}
+
+
 
 /*#gallery {*/
 /*    background-color: #414946;*/
@@ -31,7 +42,7 @@ body{
     background-color: lightblue;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 200px;
+    width: 300px;
     height: 100vh;
     flex: 1;
     align-items:center;
@@ -45,23 +56,35 @@ body{
     width: 600px;
     height: 100vh;
     flex: 2;
+    align-items:center;
+
 
 }
 #colors{
-    display: flex;
-    background-color: white;
+    /*display: flex;*/
+    /*background-color: white;*/
     flex-direction: column;
     justify-content: space-evenly;
     width: 150px;
     flex: none;
+    align-items:center;
 
-
+    border: #5577dd solid 2px;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    /* width: 95vw; */
+    height: 90vh;
+    margin-bottom: 2px;
+    justify-self: center;
 }
 
 #canvas{
     /*display:flex;*/
     /*flex-direction: column;*/
     background-color: red;
+    width: 500px;
+    height: 500px;
 }
 
 #canvas_controls{
@@ -72,7 +95,21 @@ body{
     width: 400px;
     height: 100px;
     flex: none;
-    margin-top: 700px;
+    margin-top: 70px;
+
+}
+
+.gallery_block_content{
+    display: flex;
+    background-color: #ffffff;
+    color: white;
+    height: 200px;
+    border: 4px solid black;
+}
+
+.gallery_block_content.img{
+    width: 200px;
+    height: 200px;
 }
 
 #chat{
@@ -85,31 +122,15 @@ body{
     flex: 1;
 }
 
-.gallery1{
-    display: flex;
-    background-color: #ffffff;
-    width: 90px;
-    color: white;
-    height: 90px;
-    border: 4px solid black;
+.block1{
+
 }
 
-.gallery2{
-    display: flex;
-    background-color: #ffffff;
-    width: 90px;
-    color: white;
-    height: 90px;
-    border: 4px solid black;
+.block2{
+
 }
 
-.gallery3{
-    display: flex;
-    background-color: #ffffff;
-    width: 90px;
-    color: white;
-    height: 90px;
-    border: 4px solid black;
+.block3{
 
 }
 
