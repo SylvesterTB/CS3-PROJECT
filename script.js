@@ -1,3 +1,5 @@
+
+
 const colors = document.getElementById("colors");
 
 function makeRows() {
@@ -7,8 +9,9 @@ function makeRows() {
         let cell = document.createElement("div");
         colors.appendChild(cell).className = "grid-item";
         cell.innerText = (c+1);
+
     }
 
 }
 
-makeRows()
+// makeRows()

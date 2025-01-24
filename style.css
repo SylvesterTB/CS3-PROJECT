@@ -54,7 +54,7 @@ body{
 }
 
 #colors{
-    width: 500px;
+    width: 150px;
     flex: none;
     border: #5577dd solid 2px;
     display: grid;
@@ -66,6 +66,7 @@ body{
 .grid-item {
     background-color: white;
     border: 1px solid black;
+    z-index: 91431242345;
 }
 
 #canvas{
