@@ -19,6 +19,8 @@ body{
 :root {
     --grid-cols: 2;
     --grid-rows: 10;
+    --canvas-grid-rows: 5;
+    --canvas-grid-cols: 5;
 }
 
 /*#gallery {*/
@@ -51,12 +53,12 @@ body{
     height: 100vh;
     flex: 2;
     align-items: center;
+    z-index: -47;
 }
 
 #colors{
     width: 150px;
     flex: none;
-    border: #5577dd solid 2px;
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -67,15 +69,26 @@ body{
 .grid-item {
     background-color: #ffffff;
     border: 1px solid black;
-    z-index: 91431242345;
+}
+
+.canvas-grid-item {
+    background-color: blue;
+    border: 0.005px solid black;
+    z-index: -45;
 }
 
 #canvas{
     /*display:flex;*/
     /*flex-direction: column;*/
+    display:grid;
+    flex: none;
     background-color: red;
     width: 500px;
     height: 500px;
+    grid-template-rows: repeat(var(--canvas-grid-rows), 1fr);
+    grid-template-columns: repeat(var(--canvas-grid-cols), 1fr);
+
+    z-index: -46;
 }
 
 #canvas_controls{
