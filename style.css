@@ -61,10 +61,11 @@ body{
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     height: 90vh;
+    background-color: green;
 }
 
 .grid-item {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid black;
     z-index: 91431242345;
 }
@@ -124,3 +125,6 @@ body{
 
 }
 
+button{
+    background-color: #5577dd;
+}
