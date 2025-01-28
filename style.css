@@ -70,8 +70,8 @@ body{
 
 
 .canvas-grid-item {
-    background-color: blue;
-    border: 0.005px solid black;
+    background-color: #ffffff;
+    /*border: 0.005px solid black;*/
     z-index: 3;
 }
 

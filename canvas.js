@@ -1,6 +1,3 @@
-import rgbHex from "rgb-hex";
-
-
 var canvas = document.getElementById("canvas");
 var isDrawing = false;
 var borderStuff = "";
@@ -9,9 +6,9 @@ var currentColor = "#000000";
 var tempColor = "255, 255, 255";
 
 function makeCanvasRows() {
-    canvas.style.setProperty('--canvas-grid-rows', "20");
-    canvas.style.setProperty('--canvas-grid-cols', "20");
-    for (c = 0; c < (20 * 20); c++) {
+    canvas.style.setProperty('--canvas-grid-rows', "40");
+    canvas.style.setProperty('--canvas-grid-cols', "40");
+    for (var c = 0; c < (40 * 40); c++) {
         let cell = document.createElement("div");
         cell.addEventListener("mousedown", mouseDown)
         cell.addEventListener("mouseover", mouseOver)
@@ -20,63 +17,44 @@ function makeCanvasRows() {
 
         canvas.appendChild(cell).className = "canvas-grid-item";
     }
-    console.log("makeCanvasRows");
 }
 
-const newColor = rgbHex(tempColor);
+const componentToHex = (k) => {
+    const hex = k.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
 
-console.log(newColor);
+const rgbToHex = (r, g, b) => {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 
-//
-// const componentToHexes = (c) => {
-//     const hex = c.toString(16);`
-//     return hex.length == 1 ? "0" + hex : hex;
-// }
-//
-// const rgbToHex = (r, g, b) => {
-//     return "#" + componentToHexes(r) + componentToHexes(g) + componentToHexes(b);
-// }
-//
-// function splitColor(color) {
-//     color.split(", ");
-//     return color;
-// }
-//
-// console.log(rgbToHex(splitColor(tempColor)));
-
-
+function newColor(inputColor) {
+    return inputColor.split(", ");
+}
 
 function getColor(element) {
     currentColor = element.style.backgroundImage;
     console.log("currentColor: " + currentColor);
     currentColor = currentColor.substring(currentColor.indexOf("rgb(")+4,currentColor.indexOf(")"));
     console.log("currentColor: " + currentColor);
+    currentColor = rgbToHex(parseInt(newColor(currentColor)[0]),parseInt(newColor(currentColor)[1]),parseInt(newColor(currentColor)[2]))
     return currentColor;
 }
 
 function mouseDown() {
     this.style.backgroundColor = currentColor;
-    // console.log("mousedown color" + getColor(element));
-    // this.addEventListener("mouseover", mouseOver)
+
     isDrawing = true;
-    console.log("mouseDown");
 }
 
 function mouseOver() {
     if(isDrawing){
         this.style.backgroundColor = currentColor;
-        console.log(currentColor);
     }
-    console.log("mouseOver");
 }
 
 function mouseUp() {
     isDrawing = false
-    console.log("mouseUp");
 }
-
-
-
-
 
 makeCanvasRows()
