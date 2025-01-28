@@ -8,10 +8,7 @@ body{
     margin: 0;
     padding: 0;
     /*background-image: url(download.png);*/
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;
-    background-color: white;
+    /*background-color: white;*/
     display: flex;
     flex-direction: row;
 }
@@ -53,7 +50,7 @@ body{
     height: 100vh;
     flex: 2;
     align-items: center;
-    z-index: -47;
+    z-index: 1;
 }
 
 #colors{
@@ -71,10 +68,11 @@ body{
     border: 1px solid black;
 }
 
+
 .canvas-grid-item {
     background-color: blue;
     border: 0.005px solid black;
-    z-index: -45;
+    z-index: 3;
 }
 
 #canvas{
@@ -88,7 +86,7 @@ body{
     grid-template-rows: repeat(var(--canvas-grid-rows), 1fr);
     grid-template-columns: repeat(var(--canvas-grid-cols), 1fr);
 
-    z-index: -46;
+    z-index: 2;
 }
 
 #canvas_controls{

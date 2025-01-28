@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@eastdesire/jscolor": "^2.5.2"
+    "@eastdesire/jscolor": "^2.5.2",
+    "rgb-hex": "^4.1.0",
+    "string-to-color": "^2.2.2"
   }
 }
