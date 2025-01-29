@@ -61,7 +61,7 @@ body{
 #canvas{
     display:grid;
     flex: none;
-    background-color: red;
+    background-color: #c64141;
     width: 500px;
     height: 500px;
     grid-template-rows: repeat(var(--canvas-grid-rows), 1fr);
