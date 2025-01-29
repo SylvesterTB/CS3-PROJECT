@@ -2,6 +2,7 @@
   "dependencies": {
     "@eastdesire/jscolor": "^2.5.2",
     "firebase": "^11.2.0",
+    "html2canvas": "^1.4.1",
     "rgb-hex": "^4.1.0",
     "string-to-color": "^2.2.2"
   }
