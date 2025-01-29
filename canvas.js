@@ -5,6 +5,11 @@ var clear = false;
 var currentColor = "#000000";
 var tempColor = "255, 255, 255";
 
+import { saveCanvasAsImage } from './saveImage.js'; // Import if keeping saveImage.js
+
+// Add event listener to the Save button
+document.querySelector('.save').addEventListener('click', saveCanvasAsImage);
+
 function makeCanvasRows() {
     canvas.style.setProperty('--canvas-grid-rows', "40");
     canvas.style.setProperty('--canvas-grid-cols', "40");
