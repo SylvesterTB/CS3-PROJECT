@@ -5,7 +5,6 @@ var clear = false;
 var currentColor = "#000000";
 var tempColor = "255, 255, 255";
 
-
 function makeCanvasRows() {
     canvas.style.setProperty('--canvas-grid-rows', "40");
     canvas.style.setProperty('--canvas-grid-cols', "40");
