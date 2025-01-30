@@ -1,5 +1,7 @@
 var canvas = document.getElementById("canvas");
 var isDrawing = false;
+// import isDrawing from "draw";
+
 var borderStuff = "";
 var clear = false;
 var currentColor = "#000000";

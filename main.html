@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width">
   <title>WEBSITE</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
 </head>
 
@@ -16,9 +15,9 @@
     <div class="gallery_block_content block1"> <img src="placeholder.jfif" alt="Italian Trulli">
     </div>
     <div class="gallery_block_content block2">  <img src="placeholders.jfif" alt="Italian Trulli">
-    </div> </div>
+    </div>
     <div class="gallery_block_content block3">  <img src="placerholderss.jfif" alt="Italian Trulli">
-    </div> </div>
+    </div>
     <button class ="galleryButton" onclick = "getColor()"> GO TO GALLERY   </button>
 
 </section>
@@ -51,8 +50,8 @@
 
 </div>
 
-<section id="draw">
-    <div id="canvas">
+<section id="draw"  >
+    <div id="canvas" onmouseleave="isDrawing = false" >
         <script src="canvas.js"></script>
     </div>
 
