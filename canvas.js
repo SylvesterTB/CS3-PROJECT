@@ -1,9 +1,9 @@
 var canvas = document.getElementById("canvas");
 var isDrawing = false;
 // import isDrawing from "draw";
-
+let clear = false;
 var borderStuff = "";
-var clear = false;
+
 var currentColor = "#000000";
 var tempColor = "255, 255, 255";
 
@@ -18,6 +18,11 @@ function makeCanvasRows() {
 
 
         canvas.appendChild(cell).className = "canvas-grid-item";
+
+        if(clear){
+            cell.style.backgroundColor = "#000000";
+            console.log("WORRRRDS")
+        }
     }
 }
 
@@ -58,5 +63,19 @@ function mouseOver() {
 function mouseUp() {
     isDrawing = false
 }
+
+function clearCanvas()
+{
+    const plusButton = document.getElementById("plus");
+    clear = true;
+    console.log(clear);
+
+    if(plusButton.innerHTML === "Confirm?")
+    {
+        makeCanvasRows();
+    }
+    plusButton.innerHTML  = "Confirm?";
+}
+
 
 makeCanvasRows()
